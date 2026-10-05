@@ -40,25 +40,20 @@ body,
 }
 
 body {
-  justify-content: center;
-  gap: 75px;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 nav {
-  width: 120px;
   height: fit-content;
-  margin-top: 100px;
   list-style: none;
-  padding: 50px 25px;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   gap: 10px;
 }
 
 main {
-  margin-top: 100px;
-  width: min(700px, 95vw);
-  padding: 25px;
+  width: min(900px, 95vw);
 }
 
 main .flex {

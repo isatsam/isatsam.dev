@@ -1,0 +1,38 @@
+.portfolio {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    margin: 0 25px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-bottom: 1px solid var(--accents);
+    gap: 15px;
+    align-items: top;
+
+}
+
+.project-image img {
+    max-height: 250px;
+    max-width: 250px;
+}
+
+
+.project>p {
+    margin: 0.5rem auto;
+}
+
+.project-name {
+    margin: 0.5rem auto;
+    font-size: 1.5rem;
+}
+
+.project-tools-span {
+    font-weight: bold;
+}
