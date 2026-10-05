@@ -1,13 +1,21 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "isatsam.dev" },
+    { name: "description", content: "isatsam.dev" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <main>
+      <h1 className="underscore">isatsam</h1>
+      <p>Software developer based in Dublin, Ireland.</p>
+      <ul>
+        <li><a href="https://github.com/isatsam">My GitHub</a></li>
+        <li>Contact me: hello [at] isatsam.dev</li>
+      </ul>
+    </main>
+  );
 }

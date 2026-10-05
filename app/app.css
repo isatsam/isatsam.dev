@@ -1,15 +1,66 @@
-@import "tailwindcss";
-
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+:root {
+  --background: #fbfdff;
+  --text: #1d1d24;
+  --accents: #009ab4;
+  --extra: #e3007f;
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1d1d24;
+    --text: #fbfdff;
   }
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+  font-family: "sans";
+}
+
+.underscore {
+  text-decoration: underline;
+  text-decoration-color: var(--accents);
+  text-decoration-style: wavy;
+}
+
+a {
+  color: var(--text);
+  text-underline-offset: 0.25rem;
+  text-decoration-color: var(--accents);
+}
+
+a:hover {
+  text-decoration-color: var(--extra);
+}
+
+body,
+.flex {
+  display: flex;
+}
+
+body {
+  justify-content: center;
+  gap: 75px;
+}
+
+nav {
+  width: 120px;
+  height: fit-content;
+  margin-top: 100px;
+  list-style: none;
+  padding: 50px 25px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+main {
+  margin-top: 100px;
+  width: min(700px, 95vw);
+  padding: 25px;
+}
+
+main .flex {
+  justify-content: space-between;
 }
